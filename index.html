@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSのコンポーネント</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- ハンバーガーメニュ -->
+    <header class="pfix">
+      <nav class="nav" id="nav_f">
+        <ul class="nav_ul">
+          <li><a class="list">モーダルウィンドウ</a></li>
+          <li><a class="list">アコーディオンパネル</a></li>
+          <li><a class="list">電卓：四則演算</a></li>
+          <li><a class="list">ゆっくりふわっと</a></li>
+          <li><a class="list">Topへ戻る</a></li>
+        </ul>
+      </nav>
+      <div id="target">
+        <div class="target_inner">
+          <span class="target_inner_line target_inner_1" id="line1"></span>
+          <span class="target_inner_line target_inner_2" id="line2"></span>
+          <span class="target_inner_line target_inner_3" id="line3"></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- モーダルウィンドウ -->
+      <section class="_bcg1">
+        <div class="jump">
+          <h2>モーダルウィンドウ</h2>
+          <div class="popup" id="js-popup">
+            <div class="popup_inner">
+              <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+              <p>こんにちは</p>
+            </div>
+            <div class="black-background" id="js-black-bg"></div>
+          </div>
+          <button id="js-show-popup">モーダルが開きます</button>
+        </div>
+      </section>
+      <!-- アコーディオンパネル -->
+      <section class="_bcg2">
+        <div class="jump">
+          <h2>アコーディオンパネル</h2>
+          <div class="acodion">
+            <div class="acodion_input" id="fish">魚の種類</div>
+            <ul class="list_box">
+              <li>シーラカンス</li>
+              <li>スポッテッドガー</li>
+              <li>フラワーホーン</li>
+            </ul>
+          </div>
+          <div class="acodion">
+            <div class="acodion_input" id="animal">動物の種類</div>
+            <ul class="list_box">
+              <li>ミーヤキャット</li>
+              <li>サーベルタイガー</li>
+              <li>ヌー</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- 四則演算 -->
+      <section class="_bcg3">
+        <div class="jump">
+          <h2>電卓：四則演算</h2>
+          <div class="dentaku">
+            <input type="text" id="result">
+            <div class="dentaku_table">
+              <table>
+                <tr>
+                  <td><input type="button" value="7" class="input"></td>
+                  <td><input type="button" value="8" class="input"></td>
+                  <td><input type="button" value="9" class="input"></td>
+                  <td><input type="button" value="C" id="clear"></td>
+                </tr>
+                <tr>
+                  <td><input type="button" value="4" class="input"></td>
+                  <td><input type="button" value="5" class="input"></td>
+                  <td><input type="button" value="6" class="input"></td>
+                  <td><input type="button" value="+" class="input"></td>
+                </tr>
+                <tr>
+                  <td><input type="button" value="1" class="input"></td>
+                  <td><input type="button" value="2" class="input"></td>
+                  <td><input type="button" value="3" class="input"></td>
+                  <td><input type="button" value="-" class="input"></td>
+                </tr>
+                <tr>
+                  <td><input type="button" value="0" class="input"></td>
+                  <td><input type="button" value="*" class="input"></td>
+                  <td><input type="button" value="/" class="input"></td>
+                  <td><input type="button" value="=" id="output"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ゆっくりふわっと -->
+      <section class="_bcg4">
+        <div class="jump">
+          <h2>ゆっくりふわっと</h2>
+          <div class="box_inner">
+            <div class="fade_in fade_in_up box"></div>
+            <div class="fade_in fade_in_down box"></div>
+            <div class="fade_in fade_in_left box"></div>
+            <div class="fade_in fade_in_right box"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Topへ戻る -->
+      <section class="_bcg5">
+        <div class="jump">
+          <h2>Topへ戻る</h2>
+            <button class="top_button" id="top_button">Topへ</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
